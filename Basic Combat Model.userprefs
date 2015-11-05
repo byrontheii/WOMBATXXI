@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EntityStatus.cs">
+    <Files>
+      <File FileName="Assets/EntityStatus.cs" Line="11" Column="2" />
+      <File FileName="Assets/M16A2Weapon.cs" Line="1" Column="1" />
+      <File FileName="Assets/MoverManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/TestBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets/Formation.cs" Line="1" Column="1" />
+      <File FileName="Assets/RangerFileFormation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Weapon.cs" Line="1" Column="1" />
+      <File FileName="Assets/Unit.cs" Line="1" Column="1" />
+      <File FileName="Assets/UnitMember.cs" Line="1" Column="1" />
+      <File FileName="Assets/TargetHandler.cs" Line="25" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
