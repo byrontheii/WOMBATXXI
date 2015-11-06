@@ -17,15 +17,24 @@ public class UnitMember : MonoBehaviour {
         }
     }
 
+    public void RemoveFromUnit()
+    {
+        if (unit != null)
+        {
+            unit.EntityMembers.Remove(gameObject);
+            unit = null;
+        }
+    }
+
     // Use this for initialization
-    void Awake () {
+    //void Awake () {
 		//Debug.Log ("Adding self (" + gameObject + ") to unit.");
 		
 		//Debug.Log ("Unit members: " + unit.EntityMembers);
-	}
+	//}
 	
 	// Update is called once per frame
-	void Update () {
+	//void Update () {
 	
-	}
+	//}
 }

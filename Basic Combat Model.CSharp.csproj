@@ -96,6 +96,7 @@
     <Compile Include="Assets\TestBehavior.cs" />
     <Compile Include="Assets\Unit.cs" />
     <Compile Include="Assets\UnitMember.cs" />
+    <Compile Include="Assets\Waypoint.cs" />
     <Compile Include="Assets\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>

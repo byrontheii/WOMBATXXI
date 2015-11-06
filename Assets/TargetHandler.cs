@@ -16,6 +16,7 @@ public class TargetHandler : MonoBehaviour {
 		// Choose the target to shoot at (or none) from the list of possible targets
 		while (true) {
 			yield return new WaitForSeconds (GetComponent<Weapon> ().getShotDelay ());
+            //Debug.Log(gameObject + " targeting cycle");
 			chooseTarget();
 			if (target != null)
 				fireOnTarget ();

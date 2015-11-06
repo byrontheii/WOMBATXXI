@@ -110,7 +110,7 @@ public class MoverManager : MonoBehaviour {
 			break;
 		case "MOVE_AGGRESSIVELY":
 			throw new NotImplementedException("Have not yet implemented MOVE_AGGRESSIVELY");
-			break;
+			//break;
 		case "MOVE_IN_FORMATION":
 			MoveInFormation();
 			break;
@@ -141,8 +141,8 @@ public class MoverManager : MonoBehaviour {
 			if ((lastWaypoint - transform.position).sqrMagnitude < sqrWaypointTriggerProximity) {
 				// close enough to waypoint to call it done
 				waypointQueue.Dequeue ();
-				Debug.Log(transform.position.ToString() + " is close enough to " + lastWaypoint.ToString());
-				if (waypointQueue.Count > 0) Debug.Log("Switching to waypoint " + waypointQueue.Peek());
+				//Debug.Log(transform.position.ToString() + " is close enough to " + lastWaypoint.ToString());
+				//if (waypointQueue.Count > 0) Debug.Log("Switching to waypoint " + waypointQueue.Peek());
 			}
 			Vector3 velocityVector;
 			if (waypointQueue.Count == 0) {
@@ -153,6 +153,7 @@ public class MoverManager : MonoBehaviour {
 				velocityVector = (waypointQueue.Peek () - transform.position).normalized * speed;
 			}
 			velocityVector.y = 0f; // ignore the y velocity. Y will be determined by gravity.
+            Debug.Log("MoveTowardsDestination with velocity " + velocityVector + ", sqrMagnitude " + velocityVector.sqrMagnitude);
 			if (velocityVector.sqrMagnitude > 0f) {
 				transform.rotation = Quaternion.LookRotation(velocityVector);
 				GetComponent<CharacterController> ().SimpleMove (velocityVector);
@@ -219,7 +220,7 @@ public class MoverManager : MonoBehaviour {
 					break;
 				case "MOVE_AGGRESSIVELY":
 					throw new NotImplementedException("Have not yet implemented MOVE_AGGRESSIVELY");
-					break;
+					//break;
 				}
 			}
 

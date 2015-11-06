@@ -19,13 +19,18 @@ public abstract class Weapon : MonoBehaviour {
 		float range = (target.transform.position - transform.position).magnitude;
 		float flightTime = getFlightTime (range);
 		Debug.DrawLine (transform.position, target.transform.position, Color.red, flightTime);
-		if (Random.value < getProbHit (range)) {
+        float rnd = Random.value;
+        //Debug.Log(rnd + " < " + getProbHit(range) + " ?");
+		if (rnd < getProbHit (range)) {
+            //Debug.Log("yes");
 			StartCoroutine (hitCoroutine (target, flightTime));
 		}
 	}
 
 	private IEnumerator hitCoroutine(GameObject target, float flightTime) {
+        //Debug.Log("hitCoroutine");
 		yield return new WaitForSeconds (flightTime);
+        //Debug.Log("flightTime complete");
 		target.GetComponent<EntityStatus> ().hit (this);
 	}
 }
